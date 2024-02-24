@@ -28,7 +28,7 @@ export const signInWithGoogle = async () => {
     initFirebase();
     const auth = getAuth(app);
     const provider = new GoogleAuthProvider();
-    await signInWithRedirect(auth, provider);
+    await signInWithPopup(auth, provider);
     return getRedirectResult(auth);
 };
 
